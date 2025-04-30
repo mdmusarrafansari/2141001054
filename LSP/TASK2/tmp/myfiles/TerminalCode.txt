@@ -1,0 +1,56 @@
+
+asus@LAPTOP-QACQOO48 /
+$ mkdir TASK2
+
+asus@LAPTOP-QACQOO48 /
+$ cd TASK2/
+
+asus@LAPTOP-QACQOO48 /TASK2
+$ mkdir tmp
+
+asus@LAPTOP-QACQOO48 /TASK2
+$ cd tmp/
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp
+$ mkdir myfiles
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp
+$ cd myfiles/
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ echo "This is file one.">file1.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ echo"This is file two.">file2.txt
+-bash: echoThis is file two.: command not found
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ echo "This is file two.">file2.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ echo "This is file Three.">file3.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ ls -l
+total 3
+-rw-r--r-- 1 asus None 18 Apr 23 15:44 file1.txt
+-rw-r--r-- 1 asus None 18 Apr 23 15:45 file2.txt
+-rw-r--r-- 1 asus None 20 Apr 23 15:45 file3.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ chmod g-r file1.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ ls -l
+total 3
+-rw----r-- 1 asus None 18 Apr 23 15:44 file1.txt
+-rw-r--r-- 1 asus None 18 Apr 23 15:45 file2.txt
+-rw-r--r-- 1 asus None 20 Apr 23 15:45 file3.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$ ls -l file1.txt
+-rw----r-- 1 asus None 18 Apr 23 15:44 file1.txt
+
+asus@LAPTOP-QACQOO48 /TASK2/tmp/myfiles
+$
+

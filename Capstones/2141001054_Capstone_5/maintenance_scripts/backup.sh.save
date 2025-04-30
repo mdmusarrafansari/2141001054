@@ -1,0 +1,27 @@
+
+
+if[! -d "$#!/bin/bash
+
+SOURCE_DIR="$HOME/Documents"
+DEST_DIR="$HOME/backup"
+
+# Check and create source directory
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "Source directory $SOURCE_DIR does not exist. Creating it..."
+    mkdir -p "$SOURCE_DIR"
+fi
+
+# Check and create backup directory
+mkdir -p "$DEST_DIR"
+
+# Create timestamped archive
+BACKUP_FILE="$DEST_DIR/backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+tar -czf "$BACKUP_FILE" "$SOURCE_DIR"
+
+# Status check
+if [ $? -eq 0 ]; then
+    echo "Backup successful: $BACKUP_FILE"
+else
+    echo "Backup failed."
+fi
+SOURCE_DIR"]
